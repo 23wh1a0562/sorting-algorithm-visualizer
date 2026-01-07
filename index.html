@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Sorting Algorithm Visualizer</h1>
+<p class="subtitle">Visualize Sorting Algorithms Step by Step</p>
+
+<div class="container">
+
+    <div class="controls">
+        <label>Array Size:</label>
+        <input type="number" id="arraySize" min="2" max="50">
+
+        <label>Manual Array:</label>
+        <input type="text" id="manualArray" placeholder="e.g. 12,67,24,90">
+
+        <select id="algorithm">
+    <option value="" disabled selected>Select Algorithm</option>
+    <option value="bubble">Bubble Sort</option>
+    <option value="selection">Selection Sort</option>
+    <option value="insertion">Insertion Sort</option>
+    <option value="merge">Merge Sort</option>
+    <option value="quick">Quick Sort</option>
+    <option value="heap">Heap Sort</option>
+</select>
+
+
+        <button onclick="generateArray()">Generate</button>
+        <button onclick="startSort()">Start</button>
+        <button onclick="resetArray()">Reset</button>
+    </div>
+
+    <div id="comparisonInfo">
+        Comparisons: <span id="comparisonCount">0</span>
+    </div>
+
+    <div id="arrayContainer"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* ===== Global Page Styling ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dde6ee);
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* ===== Headings ===== */
+h1 {
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+.subtitle {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* ===== Control Panel ===== */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.controls label {
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.controls input,
+.controls select {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.controls input:focus,
+.controls select:focus {
+    border-color: #4caf50;
+}
+
+/* ===== Buttons ===== */
+.controls button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #555;
+    background: #f7f7f7;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
+}
+
+/* ===== Comparison Counter ===== */
+#comparisonInfo {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===== Array Visualization Area ===== */
+#arrayContainer {
+    margin: 40px auto 20px;
+    display: flex;
+    align-items: flex-end;     /* Bars grow upward */
+    justify-content: center;
+    gap: 12px;
+    height: 350px;             /* Fixed height to avoid overflow */
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Individual Bar Wrapper ===== */
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30px;
+}
+
+/* ===== Bars ===== */
+.bar {
+    width: 100%;
+    background-color: #4caf50;
+    border-radius: 6px 6px 0 0;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+/* ===== Bar Value ===== */
+.bar-value {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===== Bar States ===== */
+.bar.compare {
+    background-color: #ff9800; /* Comparing */
+}
+
+.bar.swap {
+    background-color: #f44336; /* Swapping */
+}
+
+.bar.sorted {
+    background-color: #2196f3; /* Sorted */
+}
+
+/* ===== Responsive Fix ===== */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #arrayContainer {
+        height: 300px;
+        gap: 8px;
+    }
+
+    .bar-container {
+        width: 22px;
+    }
+}
